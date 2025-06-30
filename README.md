@@ -67,31 +67,33 @@ The main goals of this project are:
 
 lung-cancer-survival-prediction-flaml-powerbi/
 ├── data/
-│   └── lung_cancer_dataset.csv         
+│   ├── lung_cancer_dataset.csv           # Fichier source (anonymisé ou échantillon)
+│   └── data_dictionary.md                # Dictionnaire des colonnes du dataset
 │
 ├── notebooks/
-│   ├── 01_eda_preprocessing.ipynb       # Analyse exploratoire + preprocessing
-│   └── 02_model_training_flaml.ipynb    # AutoML avec FlaML + évaluation
-│   └── 03_export_predictions.ipynb      # Export des résultats pour Power BI
+│   ├── 01_eda_preprocessing.ipynb        # Analyse exploratoire + preprocessing
+│   ├── 02_model_training_flaml.ipynb     # AutoML avec FlaML + évaluation du modèle
+│   └── 03_export_predictions.ipynb       # Export des résultats pour Power BI
 │
 ├── outputs/
-│   ├── predictions.csv                  # Résultats de prédiction avec probabilité
-│   ├── evaluation_metrics.md            # Résumé des performances du modèle
-│   └── model.pkl                        # Modèle entraîné (sérialisé)
+│   ├── predictions.csv                   # Résultats de prédiction avec probabilité
+│   ├── evaluation_metrics.md             # Résumé des performances du modèle
+│   └── model.pkl                         # Modèle entraîné (fichier sérialisé)
 │
 ├── powerbi/
-│   ├── lung_cancer_dashboard.pbix       # Rapport Power BI interactif
-│   └── dashboard_screenshots/           # Captures pour aperçu visuel
-│       └── survival_rate_by_stage.png
+│   ├── lung_cancer_dashboard.pbix        # Rapport Power BI interactif
+│   └── dashboard_screenshots/            # Captures d’écran du rapport
+│       ├── survival_rate_by_stage.png
 │       └── treatment_analysis.png
 │
 ├── src/
-│   ├── preprocessing.py                 # Fonctions de nettoyage, encodage, normalisation
-│   ├── train_model.py                   # Script de training standalone avec FlaML
-│   └── utils.py                         # Fonctions utilitaires (dates, visualisation)
+│   ├── preprocessing.py                  # Fonctions de nettoyage, encodage, normalisation
+│   ├── train_model.py                    # Script de training standalone avec FlaML
+│   └── utils.py                          # Fonctions utilitaires (dates, visualisation, etc.)
 │
-├── requirements.txt                     # Librairies Python nécessaires
-├── README.md
+├── requirements.txt                      # Librairies Python nécessaires
+├── README.md                             # Présentation complète du projet
+└── .gitignore                            # Fichiers/dossiers à exclure du versioning
 
 
 ## 📌 Results Preview
